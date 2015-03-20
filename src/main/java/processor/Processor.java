@@ -1,19 +1,13 @@
 package processor;
 
-import Hub.DAO;
+import dao.CrawledDomainImpl;
 import messaging.Messenger;
 
 import java.util.concurrent.Executor;
 
-public class Processor {
+public abstract class Processor implements Runnable{
     protected Messenger messenger;
     protected volatile boolean running;
-    protected DAO dao;
     protected Executor threadPool;
 
-    public Processor(Executor threadPool, DAO dao, Messenger messenger) {
-        this.threadPool = threadPool;
-        this.dao = dao;
-        this.messenger = messenger;
-    }
 }

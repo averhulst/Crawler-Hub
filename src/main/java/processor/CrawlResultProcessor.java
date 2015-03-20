@@ -1,18 +1,21 @@
 package processor;
 
-import Hub.DAO;
+import dao.CrawledDomainDAO;
+import dao.CrawledDomainImpl;
 import Util.Util;
 import messaging.Messenger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.concurrent.ExecutorService;
 
 public class CrawlResultProcessor extends Processor{
+    private CrawledDomainDAO dao;
 
-    public CrawlResultProcessor(Messenger messenger, DAO dao, ExecutorService threadPool) {
-        super(threadPool, dao, messenger);
+    public CrawlResultProcessor(Messenger messenger, CrawledDomainDAO dao, ExecutorService threadPool) {
+        this.messenger = messenger;
+        this.dao = dao;
+        this.threadPool = threadPool;
     }
 
     public void run(){
@@ -23,7 +26,7 @@ public class CrawlResultProcessor extends Processor{
                 if(isValidResult(crawledDomain)){
                     String hash = Util.toSha256(crawledDomain.get("url").toString());
                     crawledDomain.put(hash, crawledDomain);
-                    dao.save(crawledDomain);
+                    dao.insertCrawlResult(crawledDomain);
                 }
             }
         };
