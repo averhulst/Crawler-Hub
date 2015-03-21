@@ -39,14 +39,24 @@ public class DomainQueueImpl implements DomainQueueDAO{
         }finally{
             jedisPool.returnResource(jedis);
         }
-
     }
+
     public long getSize(){
         return jedisPool.getResource().llen(jedisQueueName);
     }
+
     private void connect(){
         JedisPoolConfig poolConfig = new JedisPoolConfig();
         poolConfig.setMaxTotal(4);
         jedisPool = new JedisPool(poolConfig, "localhost");
+    }
+    public void flushDb(){
+        Jedis jedis = jedisPool.getResource();
+
+        try{
+            jedis.flushDB();
+        }finally{
+            jedisPool.returnResource(jedis);
+        }
     }
 }

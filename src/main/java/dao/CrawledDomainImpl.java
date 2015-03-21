@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import java.net.UnknownHostException;
 import java.util.*;
 
-public class CrawledDomainImpl implements  CrawledDomainDAO{
+public class CrawledDomainImpl implements CrawledDomainDAO{
     Mongo mongo;
     DB db;
     DBCollection collection;
