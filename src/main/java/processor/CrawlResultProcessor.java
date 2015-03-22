@@ -4,6 +4,7 @@ import dao.CrawledDomainDAO;
 import dao.CrawledDomainImpl;
 import Util.Util;
 import messaging.Messenger;
+import messaging.Queue;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,26 +13,35 @@ import java.util.concurrent.ExecutorService;
 public class CrawlResultProcessor extends Processor{
     private CrawledDomainDAO dao;
 
-    public CrawlResultProcessor(Messenger messenger, CrawledDomainDAO dao, ExecutorService threadPool) {
-        this.messenger = messenger;
+    public CrawlResultProcessor(Queue queue, CrawledDomainDAO dao, ExecutorService threadPool) {
+        this.queue = queue;
         this.dao = dao;
         this.threadPool = threadPool;
     }
 
     public void run(){
         running = true;
+
         Runnable r = () -> {
+            String message;
             while(running){
-                JSONObject crawledDomain = new JSONObject(messenger.fetchCrawlResult());
-                if(isValidResult(crawledDomain)){
-                    String hash = Util.toSha256(crawledDomain.get("url").toString());
-                    crawledDomain.put(hash, crawledDomain);
-                    dao.insertCrawlResult(crawledDomain);
+                if((message = queue.getMessage()) != null){
+                    processMessage(message);
                 }
+
             }
         };
 
         super.threadPool.execute(r);
+    }
+
+    private void processMessage(String message){
+        JSONObject crawledDomain = new JSONObject(message);
+        if(isValidResult(crawledDomain)){
+            String hash = Util.toSha256(crawledDomain.get("url").toString());
+            crawledDomain.put(hash, crawledDomain);
+            dao.insertCrawlResult(crawledDomain);
+        }
     }
 
     private boolean isValidResult(JSONObject crawledDomain){

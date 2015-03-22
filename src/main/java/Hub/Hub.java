@@ -1,15 +1,15 @@
 package Hub;
 
-import dao.CrawledDomainDAO;
 import dao.CrawledDomainImpl;
-import dao.DomainQueueDAO;
 import dao.DomainQueueImpl;
-import messaging.MessagingFacade;
+import messaging.MessengerImpl;
 import messaging.Messenger;
 import processor.CrawlResultProcessor;
 import processor.DiscoveredDomainProcessor;
 import processor.Processor;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Executors;
 
 public class Hub {
@@ -18,16 +18,20 @@ public class Hub {
     private Processor discoveredDomainProcessor;
 
     public Hub() {
-        messenger = new MessagingFacade();
+        messenger = new MessengerImpl();
+
+        if(messenger.getQueue("freshDomains").getQueueSize() == 0){
+            messenger.getQueue("freshDomains").publishMessages(produceDomainSeeds());
+        }
 
         crawlResultProcessor = new CrawlResultProcessor(
-                messenger,
+                messenger.getQueue("crawlResults"),
                 CrawledDomainImpl.getInstance(),
                 Executors.newSingleThreadExecutor()
         );
 
         discoveredDomainProcessor =  new DiscoveredDomainProcessor(
-                messenger,
+                messenger.getQueue("discoveredDomains"),
                 DomainQueueImpl.getInstance(),
                 Executors.newSingleThreadExecutor()
         );
@@ -36,6 +40,17 @@ public class Hub {
     public void run(){
         crawlResultProcessor.run();
         discoveredDomainProcessor.run();
+    }
+
+    public List produceDomainSeeds(){
+        List<String> domainSeed = new ArrayList<>();
+
+        domainSeed.add("http://animagraffs.com/");
+        domainSeed.add("http://jgrapht.org/");
+        domainSeed.add("http://www.pixijs.com/resources/");
+        domainSeed.add("http://www.draw2d.org/draw2d/");
+
+        return domainSeed;
     }
 
 }

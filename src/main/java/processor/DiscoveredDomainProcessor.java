@@ -1,10 +1,8 @@
 package processor;
 
-import dao.CrawledDomainDAO;
-import dao.CrawledDomainImpl;
 import Util.Util;
 import dao.DomainQueueDAO;
-import messaging.Messenger;
+import messaging.Queue;
 
 import java.util.*;
 import java.util.concurrent.ExecutorService;
@@ -12,8 +10,8 @@ import java.util.concurrent.ExecutorService;
 public class DiscoveredDomainProcessor extends Processor{
     private DomainQueueDAO dao;
 
-    public DiscoveredDomainProcessor(Messenger messenger, DomainQueueDAO dao,  ExecutorService threadPool) {
-        this.messenger = messenger;
+    public DiscoveredDomainProcessor(Queue queue, DomainQueueDAO dao,  ExecutorService threadPool) {
+        this.queue = queue;
         this.threadPool = threadPool;
         this.dao = dao;
     }
@@ -21,9 +19,10 @@ public class DiscoveredDomainProcessor extends Processor{
     public void run(){
         running = true;
         Runnable r = () -> {
+            String message;
             while(running){
-                List discoveredDomains = parseDiscoveredDomains(messenger.fetchDiscoveredDomains());
-
+                List discoveredDomains = parseDiscoveredDomains(queue.getMessage());
+                //TODO handle disocvered domains
             }
         };
 
