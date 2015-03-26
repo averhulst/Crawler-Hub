@@ -1,6 +1,6 @@
-package processor;
+package application.processor;
 
-import messaging.Queue;
+import service.messaging.Queue;
 import java.util.concurrent.Executor;
 
 public abstract class Processor implements Runnable{

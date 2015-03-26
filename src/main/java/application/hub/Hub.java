@@ -1,12 +1,12 @@
-package Hub;
+package application.hub;
 
-import dao.CrawledDomainImpl;
-import dao.DomainQueueImpl;
-import messaging.MessengerImpl;
-import messaging.Messenger;
-import processor.CrawlResultProcessor;
-import processor.DiscoveredDomainProcessor;
-import processor.Processor;
+import application.dao.CrawlResultsImpl;
+import application.dao.DomainQueueImpl;
+import service.messaging.MessengerImpl;
+import service.messaging.Messenger;
+import application.processor.CrawlResultProcessor;
+import application.processor.DiscoveredDomainProcessor;
+import application.processor.Processor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Hub {
 
         crawlResultProcessor = new CrawlResultProcessor(
                 messenger.getQueue("crawlResults"),
-                CrawledDomainImpl.getInstance(),
+                CrawlResultsImpl.getInstance(),
                 Executors.newSingleThreadExecutor()
         );
 

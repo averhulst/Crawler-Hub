@@ -1,4 +1,4 @@
-package dao;
+package application.dao;
 
 public interface DomainQueueDAO {
     public void enqueueDomain(String domain);

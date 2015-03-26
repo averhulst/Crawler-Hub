@@ -1,9 +1,6 @@
-package Hub;
+package application;
 
-import org.json.JSONObject;
-
-import java.io.*;
-import java.util.zip.GZIPOutputStream;
+import application.hub.Hub;
 
 public class Main {
     public static void main(String[] args){

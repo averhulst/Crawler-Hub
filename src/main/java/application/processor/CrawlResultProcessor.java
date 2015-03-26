@@ -1,19 +1,17 @@
-package processor;
+package application.processor;
 
-import dao.CrawledDomainDAO;
-import dao.CrawledDomainImpl;
+import application.dao.CrawledResultsDAO;
 import Util.Util;
-import messaging.Messenger;
-import messaging.Queue;
+import service.messaging.Queue;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.concurrent.ExecutorService;
 
-public class CrawlResultProcessor extends Processor{
-    private CrawledDomainDAO dao;
+public class CrawlResultProcessor extends Processor {
+    private CrawledResultsDAO dao;
 
-    public CrawlResultProcessor(Queue queue, CrawledDomainDAO dao, ExecutorService threadPool) {
+    public CrawlResultProcessor(Queue queue, CrawledResultsDAO dao, ExecutorService threadPool) {
         this.queue = queue;
         this.dao = dao;
         this.threadPool = threadPool;

@@ -1,12 +1,12 @@
 package dao;
 
+import application.dao.DomainQueueImpl;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.everyItem;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

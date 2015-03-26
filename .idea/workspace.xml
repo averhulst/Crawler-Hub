@@ -2,64 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8bf5463-f926-4107-bfd7-32b4496f7044" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/messaging/Queue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/messaging/QueueImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/messaging/QueueImplTest.java" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\Connection.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\Consumer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\MessagingFacade.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\Publisher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\test\java\messaging\ConsumerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\test\java\messaging\MessagingFacadeTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\test\java\messaging\PublisherTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/processor/CrawlResultProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/processor/CrawlResultProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/processor/DiscoveredDomainProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/processor/DiscoveredDomainProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Hub/Hub.java" afterPath="$PROJECT_DIR$/src/main/java/Hub/Hub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messaging/Messenger.java" afterPath="$PROJECT_DIR$/src/main/java/messaging/Messenger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/processor/Processor.java" afterPath="$PROJECT_DIR$/src/main/java/processor/Processor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/hub/Hub.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java" />
+      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\Hub\Hub.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\Hub\Main.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\dao\CrawledDomainDAO.java" afterPath="$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\dao\CrawledDomainImpl.java" afterPath="$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\dao\DomainQueueDAO.java" afterPath="$PROJECT_DIR$/src/main/java/application/dao/DomainQueueDAO.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\dao\DomainQueueImpl.java" afterPath="$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\Messenger.java" afterPath="$PROJECT_DIR$/src/main/java/service/messaging/Messenger.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\Queue.java" afterPath="$PROJECT_DIR$/src/main/java/service/messaging/Queue.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\messaging\QueueImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/messaging/QueueImpl.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\processor\CrawlResultProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\processor\DiscoveredDomainProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java" />
+      <change type="MOVED" beforePath="D:\Users\buttes\TomatoHub\src\main\java\processor\Processor.java" afterPath="$PROJECT_DIR$/src/main/java/application/processor/Processor.java" />
     </list>
     <ignored path="TomatoHub.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426411293753" ignored="false" />
+    <file path="/Main.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427353775558" ignored="false" />
     <file path="/pom.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426563899658" ignored="false" />
-    <file path="/Hub.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427012288409" ignored="false" />
+    <file path="/Hub.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427353453532" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Page.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426841054764" ignored="false" />
-    <file path="/Page.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1425457586952" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/src/main/java/messaging/MessagingService.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426841091004" ignored="false" />
+    <file path="/Page.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427179440613" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/messaging/MessagingService.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427162813590" ignored="false" />
     <file path="/MessagingService.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1425457953354" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426925589924" ignored="false" />
-    <file path="/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426925588736" ignored="false" />
+    <file path="/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427179721904" ignored="false" />
     <file path="/MessagingFacade.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011338339" ignored="false" />
     <file path="/DAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426576374476" ignored="false" />
-    <file path="/fragment.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011755342" ignored="false" />
+    <file path="/fragment.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427353542500" ignored="false" />
     <file path="/CrawlResultProcessor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427012027489" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Main.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426411236066" ignored="false" />
-    <file path="/DiscoveredDomainProcessor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427012233832" ignored="false" />
+    <file path="/DiscoveredDomainProcessor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427355921537" ignored="false" />
     <file path="/Processor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011827538" ignored="false" />
     <file path="/Util.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426415122615" ignored="false" />
-    <file path="/Dummy.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427012528134" ignored="false" />
+    <file path="/Dummy.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427353994844" ignored="false" />
     <file path="/Messenger.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011299376" ignored="false" />
     <file path="/DomainQueueDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838190572" ignored="false" />
     <file path="/DomainQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426811230955" ignored="false" />
     <file path="/DomainQueueImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426903978670" ignored="false" />
     <file path="/CrawledDomainDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838179360" ignored="false" />
     <file path="/CrawledDomainImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838179882" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Crawler.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427007646829" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Crawler.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163243187" ignored="false" />
     <file path="/Crawler.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426840763580" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/UrlQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426930219601" ignored="false" />
     <file path="/DomainQueueImplTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426913897716" ignored="false" />
     <file path="/UrlQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426930149134" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/DomainTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426988299490" ignored="false" />
     <file path="/DomainTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426925679410" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/RequestTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426925741375" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/RobotstxtTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426925741375" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426988251506" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/RequestTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427166268476" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/RobotstxtTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163355347" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163401458" ignored="false" />
     <file path="/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426988238460" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426930467157" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427179751703" ignored="false" />
     <file path="/Connection.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427009512480" ignored="false" />
     <file path="/Queue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011615938" ignored="false" />
     <file path="/QueueImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011610723" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163112239" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/MessagingService.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163243187" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/Consumer.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163243187" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/Publisher.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163243187" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/Messenger.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163243187" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/messaging/MessagingService.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163162021" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/messaging/Consumer.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163162021" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/messaging/Publisher.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163162021" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/messaging/Messenger.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163162021" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Crawler.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Main.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427179299054" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/UrlQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Request.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Robotstxt.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Timer.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/Page.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163275070" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Crawler.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427178332434" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Main.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/UrlQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Request.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Robotstxt.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Timer.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/Page.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163337950" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/domain/Robotstxt.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427178868836" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/domain/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427179721904" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/domain/Page.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427179441628" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/Request.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163401458" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/Timer.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163401458" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/UrlQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163401458" ignored="false" />
+    <file path="/Robotstxt.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427178868440" ignored="false" />
+    <file path="/CrawlResultsImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427355739487" ignored="false" />
+    <file path="/CrawledResultsDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427355805831" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +109,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -111,6 +145,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -119,16 +154,77 @@
     <favorites_list name="TomatoHub" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42971015">
+    <splitter split-orientation="horizontal" split-proportion="0.34335038">
       <split-first>
         <leaf>
           <file leaf-file-name="Hub.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Hub/Hub.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/hub/Hub.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="38" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state line="31" column="0" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CrawlResultsImpl.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="27" column="9" selection-start="729" selection-end="773" vertical-scroll-proportion="0.3148148">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CrawledResultsDAO.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="QueueImpl.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/QueueImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CrawledDomainImplTest.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/dao/CrawledDomainImplTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CrawlResultProcessorTest.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/processor/CrawlResultProcessorTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="16" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Util/Util.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="28" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -136,86 +232,17 @@
           <file leaf-file-name="DomainQueueImplTest.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="50" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Messenger.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messaging/Messenger.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="17" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+                <state line="20" column="55" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="QueueImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messaging/QueueImpl.java">
+          <file leaf-file-name="MessengerImpl.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="39" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+                <state line="21" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="QueueImplTest.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/messaging/QueueImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Queue.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messaging/Queue.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CrawledDomainDAO.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/dao/CrawledDomainDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="17" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Hub/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MessengerImpl.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messaging/MessengerImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="14" selection-start="639" selection-end="639" vertical-scroll-proportion="0.55284554">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DiscoveredDomainProcessor.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/processor/DiscoveredDomainProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -225,9 +252,9 @@
       <split-second>
         <leaf>
           <file leaf-file-name="CrawlResultProcessor.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/processor/CrawlResultProcessor.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="17" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+                <state line="27" column="17" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -243,20 +270,36 @@
             </entry>
           </file>
           <file leaf-file-name="DomainQueueImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/dao/DomainQueueImpl.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="43" column="26" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state line="43" column="26" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Processor.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/processor/Processor.java">
+          <file leaf-file-name="Messenger.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/Messenger.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="52" selection-start="135" selection-end="135" vertical-scroll-proportion="0.10350076">
+                <state line="5" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DiscoveredDomainProcessor.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="28" column="17" selection-start="921" selection-end="921" vertical-scroll-proportion="0.36391437">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Processor.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/Processor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="22" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -283,13 +326,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/messaging/PublisherTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/messaging/MessagingFacadeTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/messaging/ConsumerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dao/CrawledDomainImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messaging/Connection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messaging/MessagingFacade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messaging/Messenger.java" />
         <option value="$PROJECT_DIR$/src/test/java/messaging/QueueImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/messaging/QueueImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/messaging/Queue.java" />
@@ -299,6 +335,13 @@
         <option value="$PROJECT_DIR$/src/main/java/processor/DiscoveredDomainProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/messaging/MessengerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/Hub/Hub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hub/Hub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/hub/Hub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/processor/discovereddomain/DiscoveredDomainProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java" />
       </list>
     </option>
   </component>
@@ -375,6 +418,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,10 +429,6 @@
               <option name="myItemId" value="TomatoHub" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -408,66 +451,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomatoHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomatoHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomatoHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomatoHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,8 +493,30 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Util" />
+              <option name="myItemId" value="TomatoHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomatoHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -534,6 +539,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -563,7 +572,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="messaging" />
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hub" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,29 +602,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Hub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomatoHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomatoHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -621,23 +612,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="292" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="292" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="296" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="296" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$USER_HOME$/TomatoCrawler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="971" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
@@ -647,11 +636,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -659,8 +649,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -674,6 +664,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\buttes\TomatoHub\src\main" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="application" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\buttes\TomatoHub\src\main\java" />
     </key>
@@ -681,7 +674,7 @@
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Hub.Main" />
+      <option name="MAIN_CLASS_NAME" value="application.hub.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -830,6 +823,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -856,19 +862,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -958,7 +951,11 @@
       <created>1426924057637</created>
       <updated>1426924057637</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactored messaging layer to expose the queues themselves instead of a single facade">
+      <created>1427012653255</created>
+      <updated>1427012653255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -968,7 +965,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31728882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -977,18 +973,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6827112" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.098185696" sideWeight="0.6827112" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16542156" sideWeight="0.67092335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22495088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1061,22 +1058,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="50" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Hub/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/messaging/QueueImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
@@ -1084,102 +1065,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messaging/QueueImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+        <state line="20" column="55" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messaging/Queue.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/CrawledDomainImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CrawledDomainDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DomainQueueDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="31" selection-end="31" vertical-scroll-proportion="0.050822124">
+        <state line="28" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+        <state line="43" column="26" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DomainQueueImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/QueueImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="8" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/processor/CrawlResultProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="92" selection-end="92" vertical-scroll-proportion="0.076233186">
+        <state line="16" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/processor/CrawlResultProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/processor/Processor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/hub/Hub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="135" selection-end="135" vertical-scroll-proportion="0.10350076">
+        <state line="31" column="0" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/processor/DiscoveredDomainProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/Messenger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messaging/Messenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Hub/Hub.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="38" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="17" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messaging/MessengerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/Processor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="639" selection-end="639" vertical-scroll-proportion="0.55284554">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="5" column="22" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="921" selection-end="921" vertical-scroll-proportion="0.36391437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="729" selection-end="773" vertical-scroll-proportion="0.3148148">
+          <folding />
         </state>
       </provider>
     </entry>
