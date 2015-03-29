@@ -12,6 +12,7 @@ public class MessengerImpl implements Messenger{
     public MessengerImpl(){
         connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");
+        queues = new HashMap<String, Queue>();
 
         try {
             Connection connection = connectionFactory.newConnection();

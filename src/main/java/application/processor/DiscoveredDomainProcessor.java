@@ -22,28 +22,25 @@ public class DiscoveredDomainProcessor extends Processor {
         crawlResults = CrawlResultsImpl.getInstance();
     }
 
-    public void run(){
-        running = true;
-        Runnable r = () -> {
-            String message;
-            int insertedCount = 0;
-            while(running){
-                List<String> discoveredDomains = parseDiscoveredDomains(queue.getMessage());
-                for(String domain : discoveredDomains){
-                    if(!crawlResults.domainHasBeenCrawled(Util.toSha256(domain))){
-                        domainQueue.enqueueDomain(domain);
-                        insertedCount++;
-                    }
-                }
-                //TODO handle disocvered domains
-                log.info("enqueued " + insertedCount + " domains to the fresh domain queue, discarded " + (discoveredDomains.size() - insertedCount));
-            }
-        };
-
-        super.threadPool.execute(r);
+    public void tick(){
+        processDomains();
     }
 
-    private List<String> parseDiscoveredDomains(String domains){
+    private void processDomains(){
+        int insertedCount = 0;
+        List<String> discoveredDomains = normalizeDomainData(queue.getMessage());
+
+        //TODO handle discovered domains
+        for(String domain : discoveredDomains){
+            if(!crawlResults.domainHasBeenCrawled(Util.toSha256(domain))){
+                domainQueue.enqueueDomain(domain);
+                insertedCount++;
+            }
+        }
+        log.info("enqueued " + insertedCount + " domains to the fresh domain queue, discarded " + (discoveredDomains.size() - insertedCount));
+
+    }
+    private List<String> normalizeDomainData(String domains){
         List<String> discoveredDomains = new ArrayList();
         discoveredDomains.addAll(Arrays.asList(domains.split(";")));
 

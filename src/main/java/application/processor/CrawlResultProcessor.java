@@ -17,23 +17,15 @@ public class CrawlResultProcessor extends Processor {
         this.threadPool = threadPool;
     }
 
-    public void run(){
-        running = true;
 
-        Runnable r = () -> {
-            String message;
-            while(running){
-                if((message = queue.getMessage()) != null){
-                    processMessage(message);
-                }
-
-            }
-        };
-
-        super.threadPool.execute(r);
+    public void tick(){
+        String message = queue.getMessage();
+        if(message != null && message.length() > 0){
+            processCrawlResult(message);
+        }
     }
 
-    private void processMessage(String message){
+    private void processCrawlResult(String message){
         JSONObject crawledDomain = new JSONObject(message);
         if(isValidResult(crawledDomain)){
             String hash = Util.toSha256(crawledDomain.get("url").toString());
