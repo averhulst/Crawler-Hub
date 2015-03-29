@@ -1,0 +1,16 @@
+{
+    "CRAWL_RESULTS_DB"  : {
+        "Address" : 192.168.1.9",
+        "Port"    : 27017"
+    },
+
+    "DOMAIN_QUEUE_DB_ADDRESS" : {
+        "Address" : 192.168.1.9",
+        "Port"    : "6379"
+    },
+
+    "MESSAGING_SERVICE_ADDRESS" : {
+        "Address" : 192.168.1.9",
+        "Port"    : ""
+    }
+}

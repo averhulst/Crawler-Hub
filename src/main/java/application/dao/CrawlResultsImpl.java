@@ -3,7 +3,7 @@ package application.dao;
 import Util.Util;
 import com.mongodb.*;
 import org.json.JSONObject;
-
+import Util.Environment;
 import java.net.UnknownHostException;
 import java.util.*;
 
@@ -20,7 +20,7 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
 
     private CrawlResultsImpl() {
         try {
-            mongo = new MongoClient("localhost", 27017);
+            mongo = new MongoClient(Environment.CRAWL_RESULTS_DB_ADDRESS, Environment.CRAWL_RESULTS_DB_PORT);
             db = mongo.getDB("tomato");
             collection =  db.getCollection("crawledDomains");
         } catch (UnknownHostException e) {

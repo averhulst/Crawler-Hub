@@ -1,5 +1,6 @@
 package service.messaging;
 
+import Util.Environment;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import java.io.IOException;
@@ -11,7 +12,7 @@ public class MessengerImpl implements Messenger{
 
     public MessengerImpl(){
         connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("localhost");
+        connectionFactory.setHost(Environment.MESSAGING_SERVICE_ADDRESS);
         queues = new HashMap<String, Queue>();
 
         try {

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8bf5463-f926-4107-bfd7-32b4496f7044" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java" />
+    <list default="true" id="e8bf5463-f926-4107-bfd7-32b4496f7044" name="Default" comment="Applies a request rate limit to domain consumers, other small bug fixes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Util/Environment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/environment_config.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java" afterPath="$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/processor/Processor.java" afterPath="$PROJECT_DIR$/src/main/java/application/processor/Processor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomatoHub.iws" />
@@ -21,17 +22,17 @@
     <file path="/Domain.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427534392587" ignored="false" />
     <file path="/MessagingFacade.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011338339" ignored="false" />
     <file path="/DAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426576374476" ignored="false" />
-    <file path="/fragment.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427353542500" ignored="false" />
+    <file path="/fragment.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427605746518" ignored="false" />
     <file path="/CrawlResultProcessor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427603323192" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Main.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426411236066" ignored="false" />
     <file path="/DiscoveredDomainProcessor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427603273519" ignored="false" />
     <file path="/Processor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427600886464" ignored="false" />
     <file path="/Util.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426415122615" ignored="false" />
-    <file path="/Dummy.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427359206082" ignored="false" />
+    <file path="/Dummy.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427607771796" ignored="false" />
     <file path="/Messenger.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011299376" ignored="false" />
     <file path="/DomainQueueDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838190572" ignored="false" />
     <file path="/DomainQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426811230955" ignored="false" />
-    <file path="/DomainQueueImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426903978670" ignored="false" />
+    <file path="/DomainQueueImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427609056837" ignored="false" />
     <file path="/CrawledDomainDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838179360" ignored="false" />
     <file path="/CrawledDomainImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838179882" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/crawler/Crawler.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163243187" ignored="false" />
@@ -45,7 +46,7 @@
     <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/RobotstxtTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163355347" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427163401458" ignored="false" />
     <file path="/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426988238460" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427603330008" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427609158899" ignored="false" />
     <file path="/Connection.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427009512480" ignored="false" />
     <file path="/Queue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011615938" ignored="false" />
     <file path="/QueueImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011610723" ignored="false" />
@@ -81,9 +82,11 @@
     <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/Timer.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427533755532" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/UrlQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427534436627" ignored="false" />
     <file path="/Robotstxt.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427534532707" ignored="false" />
-    <file path="/CrawlResultsImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427355739487" ignored="false" />
+    <file path="/CrawlResultsImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427608981784" ignored="false" />
     <file path="/CrawledResultsDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427355805831" ignored="false" />
-    <file path="/MessengerImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427534709426" ignored="false" />
+    <file path="/MessengerImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427608459296" ignored="false" />
+    <file path="/Environment.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427609015016" ignored="false" />
+    <file path="/environment_config.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427608528529" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,10 +149,28 @@
     <splitter split-orientation="horizontal" split-proportion="0.5120743">
       <split-first>
         <leaf>
-          <file leaf-file-name="Hub.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Hub.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/hub/Hub.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="46" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.4811321">
+                <state line="42" column="5" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DomainQueueDAO.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueDAO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="6" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="environment_config.txt" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/environment_config.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="15" column="1" selection-start="302" selection-end="302" vertical-scroll-proportion="0.34366578">
                   <folding />
                 </state>
               </provider>
@@ -158,8 +179,10 @@
           <file leaf-file-name="CrawlResultsImpl.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="54" column="18" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="25" column="42" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -168,24 +191,6 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="QueueImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/QueueImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CrawledDomainImplTest.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/dao/CrawledDomainImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -204,15 +209,6 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/application/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="4" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MessengerImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="28" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -240,11 +236,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DomainQueueImpl.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="DomainQueueImpl.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="43" column="26" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="50" column="34" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.5693333">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -258,10 +256,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DiscoveredDomainProcessor.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="DiscoveredDomainProcessor.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.544">
+                <state line="31" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -297,9 +295,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/processor/CrawlResultProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/processor/Processor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messaging/messengerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/processor/DiscoveredDomainProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/messaging/MessengerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/Hub/Hub.java" />
@@ -307,12 +302,15 @@
         <option value="$PROJECT_DIR$/src/main/java/application/hub/Hub.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/processor/discovereddomain/DiscoveredDomainProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/processor/Processor.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/Environment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/environment_config.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java" />
       </list>
     </option>
   </component>
@@ -440,6 +438,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomatoHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomatoHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -654,22 +674,22 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="messaging" />
       <recent name="processor" />
       <recent name="dao" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\buttes\TomatoHub\src\main" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="application" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\buttes\TomatoHub\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="application" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -960,7 +980,11 @@
       <created>1427356039309</created>
       <updated>1427356039309</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Applies a request rate limit to domain consumers, other small bug fixes">
+      <created>1427603908148</created>
+      <updated>1427603908148</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1036,7 +1060,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactors packages again, added discovered domain processor functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applies a request rate limit to domain consumers, other small bug fixes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1055,6 +1079,7 @@
     <MESSAGE value="Adds test templates, test for domainqueue" />
     <MESSAGE value="Refactored messaging layer to expose the queues themselves instead of a single facade" />
     <MESSAGE value="Refactors packages again, added discovered domain processor functionality" />
+    <MESSAGE value="Applies a request rate limit to domain consumers, other small bug fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1064,27 +1089,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/CrawledDomainImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/QueueImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
@@ -1099,30 +1103,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/Messenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawledResultsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="18" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1141,13 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/CrawlResultProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="49" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
@@ -1155,9 +1131,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Util.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/processor/DiscoveredDomainProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.091644205">
+        <state line="31" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/Messenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messaging/MessengerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="71" selection-start="477" selection-end="477" vertical-scroll-proportion="0.22911051">
           <folding />
         </state>
       </provider>
@@ -1169,9 +1159,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Environment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="26" selection-start="472" selection-end="472" vertical-scroll-proportion="0.24393532">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/hub/Hub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="46" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.4811321">
+        <state line="42" column="5" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/CrawlResultsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="42" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="34" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.5693333">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dao/DomainQueueDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/environment_config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="302" selection-end="302" vertical-scroll-proportion="0.34366578">
           <folding />
         </state>
       </provider>

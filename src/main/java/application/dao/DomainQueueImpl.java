@@ -1,5 +1,6 @@
 package application.dao;
 
+import Util.Environment;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -48,7 +49,7 @@ public class DomainQueueImpl implements DomainQueueDAO{
     private void connect(){
         JedisPoolConfig poolConfig = new JedisPoolConfig();
         poolConfig.setMaxTotal(4);
-        jedisPool = new JedisPool(poolConfig, "localhost");
+        jedisPool = new JedisPool(poolConfig, Environment.DOMAIN_QUEUE_DB_ADDRESS, Environment.DOMAIN_QUEUE_DB_PORT);
     }
     public void flushDb(){
         Jedis jedis = jedisPool.getResource();
