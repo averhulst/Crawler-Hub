@@ -17,7 +17,6 @@ public class CrawlResultProcessor extends Processor {
         this.threadPool = threadPool;
     }
 
-
     public void tick(){
         String message = queue.getMessage();
         if(message != null && message.length() > 0){
@@ -26,11 +25,12 @@ public class CrawlResultProcessor extends Processor {
     }
 
     private void processCrawlResult(String message){
-        JSONObject crawledDomain = new JSONObject(message);
+        JSONObject crawledDomain = new JSONObject();
         if(isValidResult(crawledDomain)){
-            String hash = Util.toSha256(crawledDomain.get("url").toString());
-            crawledDomain.put(hash, crawledDomain);
+            String hash = Util.toSha256(crawledDomain.getString("url"));
+            crawledDomain.put(hash, message);
             dao.insertCrawlResult(crawledDomain);
+            LOGGER.info("Crawl result inserted for domain: " + crawledDomain.get("url").toString());
         }
     }
 

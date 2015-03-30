@@ -20,7 +20,7 @@ public class Hub {
     public Hub() {
         messenger = new MessengerImpl();
 
-        if(messenger.getQueue("freshDomains").getQueueSize() == 0){
+        if(messenger.getQueue("freshDomains").getQueueSize() < 4){
             messenger.getQueue("freshDomains").publishMessages(produceDomainSeeds());
         }
 
@@ -47,8 +47,8 @@ public class Hub {
 
         domainSeed.add("http://animagraffs.com/");
         domainSeed.add("http://jgrapht.org/");
-        domainSeed.add("http://www.pixijs.com/resources/");
-        domainSeed.add("http://www.draw2d.org/draw2d/");
+        domainSeed.add("http://www.pixijs.com/");
+        domainSeed.add("http://www.draw2d.org/");
 
         return domainSeed;
     }

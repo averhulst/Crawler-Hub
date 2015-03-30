@@ -13,6 +13,8 @@ public class MessengerImpl implements Messenger{
     public MessengerImpl(){
         connectionFactory = new ConnectionFactory();
         connectionFactory.setHost(Environment.MESSAGING_SERVICE_ADDRESS);
+        connectionFactory.setUsername(Environment.MESSAGING_SERVICE_USER_NAME);
+        connectionFactory.setPassword(Environment.MESSAGING_SERVICE_PASS);
         queues = new HashMap<String, Queue>();
 
         try {

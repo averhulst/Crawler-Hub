@@ -2,6 +2,7 @@ package Util;
 
 import org.json.JSONObject;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -12,11 +13,13 @@ public class Environment {
     public static int DOMAIN_QUEUE_DB_PORT;
     public static String MESSAGING_SERVICE_ADDRESS;
     public static int MESSAGING_SERVICE_PORT;
+    public static String MESSAGING_SERVICE_USER_NAME;
+    public static String MESSAGING_SERVICE_PASS;
 
-    public Environment() {
+    static {
         StringBuilder sb = new StringBuilder();
         try{
-            BufferedReader reader = new BufferedReader(new FileReader("/environment_config.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/environment_config.txt"));
             String line = null;
             sb = new StringBuilder();
 
@@ -27,15 +30,17 @@ public class Environment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        System.out.println(sb.toString());
         JSONObject environmentJSON = new JSONObject(sb.toString());
 
-        CRAWL_RESULTS_DB_ADDRESS    =  environmentJSON.getString("CRAWL_RESULTS_DB_ADDRESS");
-        CRAWL_RESULTS_DB_PORT       =  (int)environmentJSON.get("CRAWL_RESULTS_DB_PORT");
-        DOMAIN_QUEUE_DB_ADDRESS     =  environmentJSON.getString("DOMAIN_QUEUE_DB_ADDRESS");
-        DOMAIN_QUEUE_DB_PORT        =  (int)environmentJSON.get("DOMAIN_QUEUE_DB_PORT");
-        MESSAGING_SERVICE_ADDRESS   =  environmentJSON.getString("MESSAGING_SERVICE_ADDRESS");
-        MESSAGING_SERVICE_PORT      =  (int)environmentJSON.get("MESSAGING_SERVICE_PORT");
+        CRAWL_RESULTS_DB_ADDRESS    =  environmentJSON.getJSONObject("CRAWL_RESULTS_DB").getString("Address");
+        CRAWL_RESULTS_DB_PORT       =  (int)environmentJSON.getJSONObject("CRAWL_RESULTS_DB").get("Port");
+        DOMAIN_QUEUE_DB_ADDRESS     =  environmentJSON.getJSONObject("DOMAIN_QUEUE_DB").getString("Address");
+        DOMAIN_QUEUE_DB_PORT        =  (int)environmentJSON.getJSONObject("DOMAIN_QUEUE_DB").get("Port");
+        MESSAGING_SERVICE_ADDRESS   =  environmentJSON.getJSONObject("MESSAGING_SERVICE").getString("Address");
+        MESSAGING_SERVICE_PORT      =  (int)environmentJSON.getJSONObject("MESSAGING_SERVICE").get("Port");
+        MESSAGING_SERVICE_USER_NAME   =  environmentJSON.getJSONObject("MESSAGING_SERVICE").getString("User_name");
+        MESSAGING_SERVICE_PASS      =  environmentJSON.getJSONObject("MESSAGING_SERVICE").getString("Pass");
 
     }
 

@@ -13,8 +13,6 @@ public class DiscoveredDomainProcessor extends Processor {
     private DomainQueueDAO domainQueue;
     private CrawledResultsDAO crawlResults;
 
-    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(DiscoveredDomainProcessor.class);
-
     public DiscoveredDomainProcessor(Queue queue, DomainQueueDAO dao,  ExecutorService threadPool) {
         this.queue = queue;
         this.threadPool = threadPool;
@@ -32,17 +30,15 @@ public class DiscoveredDomainProcessor extends Processor {
 
         //TODO handle discovered domains
         for(String domain : discoveredDomains){
-            if(!crawlResults.domainHasBeenCrawled(Util.toSha256(domain))){
+            if(domain.length() > 0 && !crawlResults.domainHasBeenCrawled(Util.toSha256(domain))){
                 domainQueue.enqueueDomain(domain);
                 insertedCount++;
+                LOGGER.info("enqueued " + insertedCount + " domains to the fresh domain queue, discarded " + (discoveredDomains.size() - insertedCount));
             }
         }
-        log.info("enqueued " + insertedCount + " domains to the fresh domain queue, discarded " + (discoveredDomains.size() - insertedCount));
-
     }
     private List<String> normalizeDomainData(String domains){
         List<String> discoveredDomains = new ArrayList();
-        discoveredDomains.addAll(Arrays.asList(domains.split(";")));
 
         Map domainHash = new HashMap<String, String>();
         for(String domain : discoveredDomains){
