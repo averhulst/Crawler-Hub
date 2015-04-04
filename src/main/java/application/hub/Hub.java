@@ -38,8 +38,8 @@ public class Hub {
     }
 
     public void run(){
-        crawlResultProcessor.run();
-        discoveredDomainProcessor.run();
+        //crawlResultProcessor.run();
+        //discoveredDomainProcessor.run();
     }
 
     public List produceDomainSeeds(){
@@ -49,6 +49,15 @@ public class Hub {
         domainSeed.add("http://jgrapht.org/");
         domainSeed.add("http://www.pixijs.com/");
         domainSeed.add("http://www.draw2d.org/");
+        domainSeed.add("http://www.reddit.com/");
+        domainSeed.add("http://www.cnn.com/");
+        domainSeed.add("http://www.stackoverflow.com/");
+        domainSeed.add("http://www.theguardian.com/");
+        domainSeed.add("http://www.newsweek.com/");
+        domainSeed.add("http://www.usatoday.com/");
+        domainSeed.add("http://www.digg.com/");
+        domainSeed.add("http://www.anandtech.com/");
+        domainSeed.add("http://www.tomshardware.com/");
 
         return domainSeed;
     }
