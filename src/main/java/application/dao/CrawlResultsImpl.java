@@ -2,6 +2,7 @@ package application.dao;
 
 import Util.Util;
 import com.mongodb.*;
+import com.mongodb.util.JSON;
 import org.json.JSONObject;
 import Util.Environment;
 import java.net.UnknownHostException;
@@ -29,14 +30,12 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
     }
 
     public synchronized void insertCrawlResult(JSONObject domain){
-        BasicDBObject databaseDocument = new BasicDBObject();
-        Iterator<String> iterator = domain.keys();
-        Map<String, String> outMap = new HashMap<String, String>();
+        BasicDBObject databaseDocument = new BasicDBObject((BasicDBObject)JSON.parse(domain.toString()));
 
-        while(iterator.hasNext()) {
-            String name = iterator.next();
-            databaseDocument.put(name, domain.getString(name));
+        if(databaseDocument.size() > 0){
+            collection.save(databaseDocument);
         }
+
     }
 
     public synchronized List get(Map where){

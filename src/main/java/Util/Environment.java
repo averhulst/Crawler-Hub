@@ -7,14 +7,16 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Environment {
-    public static String CRAWL_RESULTS_DB_ADDRESS;
-    public static int CRAWL_RESULTS_DB_PORT;
-    public static String DOMAIN_QUEUE_DB_ADDRESS;
-    public static int DOMAIN_QUEUE_DB_PORT;
-    public static String MESSAGING_SERVICE_ADDRESS;
-    public static int MESSAGING_SERVICE_PORT;
-    public static String MESSAGING_SERVICE_USER_NAME;
-    public static String MESSAGING_SERVICE_PASS;
+    public static final String CRAWL_RESULTS_DB_ADDRESS;
+    public static final int    CRAWL_RESULTS_DB_PORT;
+
+    public static final String DOMAIN_QUEUE_DB_ADDRESS;
+    public static final int    DOMAIN_QUEUE_DB_PORT;
+
+    public static final String MESSAGING_SERVICE_ADDRESS;
+    public static final int    MESSAGING_SERVICE_PORT;
+    public static final String MESSAGING_SERVICE_USER_NAME;
+    public static final String MESSAGING_SERVICE_PASS;
 
     static {
         StringBuilder sb = new StringBuilder();
@@ -30,7 +32,7 @@ public class Environment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(sb.toString());
+
         JSONObject environmentJSON = new JSONObject(sb.toString());
 
         CRAWL_RESULTS_DB_ADDRESS    =  environmentJSON.getJSONObject("CRAWL_RESULTS_DB").getString("Address");

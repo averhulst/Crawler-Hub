@@ -8,16 +8,18 @@ import service.messaging.Queue;
 
 import java.util.*;
 import java.util.concurrent.ExecutorService;
+import java.util.logging.Logger;
 
 public class DiscoveredDomainProcessor extends Processor {
     private DomainQueueDAO domainQueue;
     private CrawledResultsDAO crawlResults;
-
+    private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainProcessor.class.getName());
     public DiscoveredDomainProcessor(Queue queue, DomainQueueDAO dao,  ExecutorService threadPool) {
         this.queue = queue;
         this.threadPool = threadPool;
         this.domainQueue = dao;
         crawlResults = CrawlResultsImpl.getInstance();
+        LOGGER.info("DiscoveredDomainProcessor running!");
     }
 
     public void tick(){

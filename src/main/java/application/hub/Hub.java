@@ -38,7 +38,7 @@ public class Hub {
     }
 
     public void run(){
-        //crawlResultProcessor.run();
+        crawlResultProcessor.run();
         //discoveredDomainProcessor.run();
     }
 

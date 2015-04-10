@@ -2,14 +2,12 @@ package application.processor;
 
 import service.messaging.Queue;
 import java.util.concurrent.Executor;
-import java.util.logging.Logger;
 
 public abstract class Processor implements Runnable{
     protected volatile boolean running;
     protected final int REQUEST_INTERVAL_MS = 50;
     protected Executor threadPool;
     protected Queue queue;
-    protected final static Logger LOGGER = Logger.getLogger(DiscoveredDomainProcessor.class.getName());
 
     abstract void tick();
 
