@@ -1,10 +1,10 @@
 package application.dao;
 
-import Util.Util;
+import application.hub.Config;
 import com.mongodb.*;
 import com.mongodb.util.JSON;
 import org.json.JSONObject;
-import Util.Environment;
+
 import java.net.UnknownHostException;
 import java.util.*;
 
@@ -21,7 +21,10 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
 
     private CrawlResultsImpl() {
         try {
-            mongo = new MongoClient(Environment.CRAWL_RESULTS_DB_ADDRESS, Environment.CRAWL_RESULTS_DB_PORT);
+            mongo = new MongoClient(
+                    Config.ENVIRONMENT.CRAWL_RESULTS_DB_ADDRESS,
+                    Config.ENVIRONMENT.CRAWL_RESULTS_DB_PORT
+            );
             db = mongo.getDB("tomato");
             collection =  db.getCollection("crawledDomains");
         } catch (UnknownHostException e) {

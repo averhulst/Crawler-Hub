@@ -1,20 +1,20 @@
 package application.dao;
 
-import Util.Environment;
+import application.hub.Config;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-public class DomainQueueImpl implements DomainQueueDAO{
+public class DomainStoreImpl implements DomainStoreDAO {
     private JedisPool jedisPool;
     private String jedisQueueName;
-    private static DomainQueueImpl instance = new DomainQueueImpl();
+    private static DomainStoreImpl instance = new DomainStoreImpl();
 
-    private DomainQueueImpl() {
+    private DomainStoreImpl() {
         jedisQueueName = "domainQueue";
         connect();
     }
-    public static DomainQueueImpl getInstance(){
+    public static DomainStoreImpl getInstance(){
         return instance;
     }
 
@@ -43,13 +43,17 @@ public class DomainQueueImpl implements DomainQueueDAO{
     }
 
     public long getSize(){
-        return jedisPool.getResource().llen(jedisQueueName);
+        return jedisPool.getResource().scard(jedisQueueName);
     }
 
     private void connect(){
         JedisPoolConfig poolConfig = new JedisPoolConfig();
         poolConfig.setMaxTotal(4);
-        jedisPool = new JedisPool(poolConfig, Environment.DOMAIN_QUEUE_DB_ADDRESS, Environment.DOMAIN_QUEUE_DB_PORT);
+        jedisPool = new JedisPool(
+                poolConfig,
+                Config.ENVIRONMENT.DOMAIN_QUEUE_DB_ADDRESS,
+                Config.ENVIRONMENT.DOMAIN_QUEUE_DB_PORT
+        );
     }
     public void flushDb(){
         Jedis jedis = jedisPool.getResource();

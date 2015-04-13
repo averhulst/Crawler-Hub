@@ -1,6 +1,6 @@
 package dao;
 
-import application.dao.DomainQueueImpl;
+import application.dao.DomainStoreImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,13 +12,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DomainQueueImplTest {
-    private DomainQueueImpl domainQueueImpl;
+    private DomainStoreImpl domainStoreImpl;
 
     @Before
     public void setUp() throws Exception {
-        domainQueueImpl = DomainQueueImpl.getInstance();
-        domainQueueImpl.flushDb();
-        assert(domainQueueImpl.getNextDomain() == null);
+        domainStoreImpl = DomainStoreImpl.getInstance();
+        domainStoreImpl.flushDb();
+        assert(domainStoreImpl.getNextDomain() == null);
     }
 
     @Test
@@ -32,11 +32,11 @@ public class DomainQueueImplTest {
         List<String> retrievedDomains = new ArrayList<>();
 
         for(String domain : insertedDomains){
-            domainQueueImpl.enqueueDomain(domain);
+            domainStoreImpl.enqueueDomain(domain);
         }
 
         for(int i = 0 ; i < domains.length ; i++){
-            retrievedDomains.add(domainQueueImpl.getNextDomain());
+            retrievedDomains.add(domainStoreImpl.getNextDomain());
         }
 
         assertEquals(retrievedDomains,insertedDomains);

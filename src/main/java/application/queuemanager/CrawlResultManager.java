@@ -1,4 +1,4 @@
-package application.processor;
+package application.queuemanager;
 
 import application.dao.CrawledResultsDAO;
 import Util.Util;
@@ -6,24 +6,33 @@ import service.messaging.Queue;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.logging.Logger;
 
-public class CrawlResultProcessor extends Processor {
+public class CrawlResultManager extends QueueManager {
     private CrawledResultsDAO dao;
-    private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainProcessor.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainManager.class.getName());
 
-    public CrawlResultProcessor(Queue queue, CrawledResultsDAO dao, ExecutorService threadPool) {
+    public CrawlResultManager(Queue queue, CrawledResultsDAO dao, ExecutorService threadPool) {
         this.queue = queue;
         this.dao = dao;
         this.threadPool = threadPool;
-        LOGGER.info("CrawlResultProcessor running!");
+        LOGGER.info("CrawlResultManager running!");
     }
 
     public void tick(){
         String message = queue.getMessage();
         if(message != null && message.length() > 0){
-            processCrawlResult(message);
+            try {
+                String decompressedString = Util.decompressString(message);
+                processCrawlResult(decompressedString);
+            } catch (IOException e) {
+                LOGGER.info(e.getStackTrace().toString());
+                e.printStackTrace();
+            }
+
         }
     }
 

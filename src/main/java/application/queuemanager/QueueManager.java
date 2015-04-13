@@ -1,11 +1,12 @@
-package application.processor;
+package application.queuemanager;
 
+import application.hub.Config;
 import service.messaging.Queue;
 import java.util.concurrent.Executor;
 
-public abstract class Processor implements Runnable{
+public abstract class QueueManager implements Runnable{
     protected volatile boolean running;
-    protected final int REQUEST_INTERVAL_MS = 50;
+    protected final int REQUEST_INTERVAL_MS = Config.QUEUE_MANAGER_TICK_INTERVAL;
     protected Executor threadPool;
     protected Queue queue;
 

@@ -1,65 +1,48 @@
 package application.hub;
 
 import application.dao.CrawlResultsImpl;
-import application.dao.DomainQueueImpl;
+import application.dao.DomainStoreImpl;
+import application.queuemanager.DiscoveredDomainManager;
+import application.queuemanager.FreshDomainProcessor;
+import application.queuemanager.QueueManager;
 import service.messaging.MessengerImpl;
 import service.messaging.Messenger;
-import application.processor.CrawlResultProcessor;
-import application.processor.DiscoveredDomainProcessor;
-import application.processor.Processor;
+import application.queuemanager.CrawlResultManager;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.Executors;
 
 public class Hub {
     private Messenger messenger;
-    private Processor crawlResultProcessor;
-    private Processor discoveredDomainProcessor;
+    private QueueManager crawlResultManager;
+    private QueueManager discoveredDomainManager;
+    private QueueManager freshDomainManager;
 
     public Hub() {
         messenger = new MessengerImpl();
 
-        if(messenger.getQueue("freshDomains").getQueueSize() < 4){
-            messenger.getQueue("freshDomains").publishMessages(produceDomainSeeds());
-        }
-
-        crawlResultProcessor = new CrawlResultProcessor(
+        crawlResultManager = new CrawlResultManager(
                 messenger.getQueue("crawlResults"),
                 CrawlResultsImpl.getInstance(),
                 Executors.newSingleThreadExecutor()
         );
 
-        discoveredDomainProcessor =  new DiscoveredDomainProcessor(
+        discoveredDomainManager =  new DiscoveredDomainManager(
                 messenger.getQueue("discoveredDomains"),
-                DomainQueueImpl.getInstance(),
+                DomainStoreImpl.getInstance(),
+                Executors.newSingleThreadExecutor()
+        );
+
+        freshDomainManager =  new FreshDomainProcessor(
+                messenger.getQueue("freshDomains"),
+                DomainStoreImpl.getInstance(),
                 Executors.newSingleThreadExecutor()
         );
     }
 
     public void run(){
-        crawlResultProcessor.run();
-        //discoveredDomainProcessor.run();
-    }
-
-    public List produceDomainSeeds(){
-        List<String> domainSeed = new ArrayList<>();
-
-        domainSeed.add("http://animagraffs.com/");
-        domainSeed.add("http://jgrapht.org/");
-        domainSeed.add("http://www.pixijs.com/");
-        domainSeed.add("http://www.draw2d.org/");
-        domainSeed.add("http://www.reddit.com/");
-        domainSeed.add("http://www.cnn.com/");
-        domainSeed.add("http://www.stackoverflow.com/");
-        domainSeed.add("http://www.theguardian.com/");
-        domainSeed.add("http://www.newsweek.com/");
-        domainSeed.add("http://www.usatoday.com/");
-        domainSeed.add("http://www.digg.com/");
-        domainSeed.add("http://www.anandtech.com/");
-        domainSeed.add("http://www.tomshardware.com/");
-
-        return domainSeed;
+        crawlResultManager.run();
+        discoveredDomainManager.run();
+        freshDomainManager.run();
     }
 
 }
