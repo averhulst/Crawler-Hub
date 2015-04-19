@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import java.net.UnknownHostException;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class CrawlResultsImpl implements CrawledResultsDAO {
     Mongo mongo;
@@ -36,7 +37,11 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
         BasicDBObject databaseDocument = new BasicDBObject((BasicDBObject)JSON.parse(domain.toString()));
 
         if(databaseDocument.size() > 0){
-            collection.save(databaseDocument);
+            try{
+                collection.save(databaseDocument);
+            }catch(com.mongodb.MongoInternalException e){
+                System.err.println("BSON size exceeded");
+            }
         }
 
     }

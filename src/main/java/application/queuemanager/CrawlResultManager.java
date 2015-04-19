@@ -48,11 +48,12 @@ public class CrawlResultManager extends QueueManager {
 
     private boolean isValidResult(JSONObject crawledDomain){
         String URL;
-        JSONArray pages;
+        JSONObject pages;
 
         try{
             URL = crawledDomain.get("url").toString();
-            pages = crawledDomain.getJSONArray("pages");
+            pages = crawledDomain.getJSONObject("pages");
+
         }catch(JSONException e){
             e.printStackTrace();
             //throws on lookups for keys that don't exist, not valid

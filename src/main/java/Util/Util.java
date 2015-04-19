@@ -3,6 +3,7 @@ package Util;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
@@ -28,21 +29,21 @@ public class Util {
     }
 
     public static String compressString(String str) throws IOException {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        GZIPOutputStream gzip = new GZIPOutputStream(outputStream);
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        GZIPOutputStream gzip = new GZIPOutputStream(out);
 
-        gzip.write(str.getBytes());
+        gzip.write(str.getBytes("ISO-8859-1"));
         gzip.close();
-        String outStr = outputStream.toString("ISO-8859-1");
 
-        return outStr;
+        return Base64.getEncoder().encodeToString(out.toByteArray());
     }
 
     public static String decompressString(String str) throws IOException {
         String outStr = "";
         String line;
+        byte[] decodedBytes = Base64.getDecoder().decode(str);
 
-        GZIPInputStream gis = new GZIPInputStream(new ByteArrayInputStream(str.getBytes("ISO-8859-1")));
+        GZIPInputStream gis = new GZIPInputStream(new ByteArrayInputStream(decodedBytes));
         BufferedReader reader = new BufferedReader(new InputStreamReader(gis, "ISO-8859-1"));
 
         while ((line = reader.readLine()) != null) {
