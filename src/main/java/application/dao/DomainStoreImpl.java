@@ -20,21 +20,20 @@ public class DomainStoreImpl implements DomainStoreDAO {
 
     public String getNextDomain(){
         Jedis jedis = jedisPool.getResource();
-        String nextdomain;
-
+        String nextdomain = null;
         try{
             nextdomain = jedis.spop(jedisQueueName);
             //spop will return a random item from the set, not going to care about order for now
         }finally{
             jedisPool.returnResource(jedis);
         }
+
         return nextdomain;
     }
 
 
     public void enqueueDomain(String domain){
         Jedis jedis = jedisPool.getResource();
-
         try{
             jedis.sadd(jedisQueueName, domain);
         }finally{
@@ -43,7 +42,10 @@ public class DomainStoreImpl implements DomainStoreDAO {
     }
 
     public long getSize(){
-        return jedisPool.getResource().scard(jedisQueueName);
+        Jedis jedis = jedisPool.getResource();
+        long size = jedis.scard(jedisQueueName);
+        jedisPool.returnResource(jedis);
+        return size;
     }
 
     private void connect(){

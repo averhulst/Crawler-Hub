@@ -3,7 +3,7 @@ package application.hub;
 import application.dao.CrawlResultsImpl;
 import application.dao.DomainStoreImpl;
 import application.queuemanager.DiscoveredDomainManager;
-import application.queuemanager.FreshDomainProcessor;
+import application.queuemanager.FreshDomainManager;
 import application.queuemanager.QueueManager;
 import service.messaging.MessengerImpl;
 import service.messaging.Messenger;
@@ -32,7 +32,7 @@ public class Hub {
                 Executors.newSingleThreadExecutor()
         );
 
-        freshDomainManager =  new FreshDomainProcessor(
+        freshDomainManager =  new FreshDomainManager(
                 messenger.getQueue("freshDomains"),
                 DomainStoreImpl.getInstance(),
                 Executors.newSingleThreadExecutor()
