@@ -18,7 +18,6 @@ public class FreshDomainManager extends QueueManager {
         this.queue = queue;
         this.threadPool = threadPool;
         this.domainStore = dao;
-        this.threadPool = threadPool;
         LOGGER.info("FreshDomainManager running!");
 
         if(queue.getQueueSize() == 0){
