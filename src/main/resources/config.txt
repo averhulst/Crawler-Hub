@@ -16,7 +16,7 @@
       "Address": "192.168.1.9",
       "Port": 0,
       "User_name": "crawlernode",
-      "Pass": "nodelol"
+      "Pass": "password"
     }
   }
 
