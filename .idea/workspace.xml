@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8bf5463-f926-4107-bfd7-32b4496f7044" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawler diagram.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.txt" afterPath="$PROJECT_DIR$/src/main/resources/config.txt" />
+    <list default="true" id="e8bf5463-f926-4107-bfd7-32b4496f7044" name="Default" comment="Fixes typo">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomatoHub.iws" />
@@ -25,7 +23,7 @@
     <file path="/DiscoveredDomainProcessor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1428899967574" ignored="false" />
     <file path="/Processor.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1428899892471" ignored="false" />
     <file path="/Util.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1429431600216" ignored="false" />
-    <file path="/Dummy.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1433809064794" ignored="false" />
+    <file path="/Dummy.txt" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1433809109330" ignored="false" />
     <file path="/Messenger.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427011299376" ignored="false" />
     <file path="/DomainQueueDAO.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426838190572" ignored="false" />
     <file path="/DomainQueue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1426811230955" ignored="false" />
@@ -43,7 +41,7 @@
     <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/RobotstxtTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1430037433113" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/test/java/crawler/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1430037433113" ignored="false" />
     <file path="/UrlQueueTest.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1428304974847" ignored="false" />
-    <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1433809078921" ignored="false" />
+    <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1433809109023" ignored="false" />
     <file path="/Connection.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1427009512480" ignored="false" />
     <file path="/Queue.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1428995517727" ignored="false" />
     <file path="/QueueImpl.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1429427567788" ignored="false" />
@@ -166,7 +164,7 @@
     <file path="/Bullet.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1431633863793" ignored="false" />
     <file path="$USER_HOME$/SpaceGame/src/main/java/game/Vector.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1430864781408" ignored="false" />
     <file path="/Vector.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1430864734787" ignored="false" />
-    <file path="$USER_HOME$/SpaceGame/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1433809078921" ignored="false" />
+    <file path="$USER_HOME$/SpaceGame/.idea/workspace.xml" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1433809109023" ignored="false" />
     <file path="$USER_HOME$/SpaceGame/src/main/java/game/entity/projectile/Bullet.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1431638580494" ignored="false" />
     <file path="$USER_HOME$/SpaceGame/src/main/java/game/entity/projectile/Missile.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1431648318047" ignored="false" />
     <file path="$USER_HOME$/SpaceGame/src/main/java/game/entity/guns/BasicGun.java" changelist="e8bf5463-f926-4107-bfd7-32b4496f7044" time="1431633940340" ignored="false" />
@@ -1281,7 +1279,11 @@
       <created>1430802130877</created>
       <updated>1430802130877</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixes typo">
+      <created>1433809099361</created>
+      <updated>1433809099361</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1306,7 +1308,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1319,19 +1321,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18729989" sideWeight="0.37527838" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6827112" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42351454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10458911" sideWeight="0.8339882" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18729989" sideWeight="0.6247216" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18729989" sideWeight="0.6247216" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16586769" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25540274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
