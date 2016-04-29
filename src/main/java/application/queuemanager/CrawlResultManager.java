@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class CrawlResultManager extends QueueManager {
     private CrawledResultsDAO dao;
-    private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainManager.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(CrawlResultManager.class.getName());
 
     public CrawlResultManager(Queue queue, CrawledResultsDAO dao, ExecutorService threadPool) {
         this.queue = queue;

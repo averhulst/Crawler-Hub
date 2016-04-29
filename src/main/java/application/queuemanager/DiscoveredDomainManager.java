@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.logging.Logger;
 
-public class FreshDomainManager extends QueueManager {
+public class DiscoveredDomainManager extends QueueManager {
     private DomainStoreDAO domainStore;
-    private final static Logger LOGGER = Logger.getLogger(FreshDomainManager.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainManager.class.getName());
     private int desiredQueueSize = Config.FRESH_DOMAIN_QUEUE_DESIRED_SIZE;
 
-    public FreshDomainManager(Queue queue, DomainStoreDAO dao, ExecutorService threadPool) {
+    public DiscoveredDomainManager(Queue queue, DomainStoreDAO dao, ExecutorService threadPool) {
         this.queue = queue;
         this.threadPool = threadPool;
         this.domainStore = dao;
-        LOGGER.info("FreshDomainManager running!");
+        LOGGER.info("DiscoveredDomainManager running!");
 
         if(queue.getQueueSize() == 0){
             queue.publishMessages(produceDomainSeeds());
