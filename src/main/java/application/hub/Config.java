@@ -1,36 +1,30 @@
 package application.hub;
 
+import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Config {
     public static final Environment ENVIRONMENT;
     public static final int QUEUE_MANAGER_TICK_INTERVAL;
     public static final int FRESH_DOMAIN_QUEUE_DESIRED_SIZE;
 
-    static{
-        StringBuilder sb = new StringBuilder();
-        try{
-            BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/config.txt"));
-            String line = null;
-            sb = new StringBuilder();
+    static {
+        String configStr = null;
+        InputStream inputStream = Config.class.getClassLoader().getResourceAsStream("config.txt");
 
-            while ((line = reader.readLine()) != null) {
-                sb.append(line);
-            }
-
+        try {
+            configStr = IOUtils. toString(inputStream, "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        JSONObject configJSON = new JSONObject(sb.toString());
+        JSONObject configJSON = new JSONObject(configStr);
 
-        QUEUE_MANAGER_TICK_INTERVAL     = configJSON.getInt("QUEUE_MANAGER_TICK_RATE");
-        FRESH_DOMAIN_QUEUE_DESIRED_SIZE = configJSON.getInt("FRESH_DOMAIN_QUEUE_DESIRED_SIZE");
-        ENVIRONMENT                     = new Environment(configJSON.getJSONObject("ENVIRONMENT"));
+            QUEUE_MANAGER_TICK_INTERVAL     = configJSON.getInt("QUEUE_MANAGER_TICK_RATE");
+            FRESH_DOMAIN_QUEUE_DESIRED_SIZE = configJSON.getInt("FRESH_DOMAIN_QUEUE_DESIRED_SIZE");
+            ENVIRONMENT                     = new Environment(configJSON.getJSONObject("ENVIRONMENT"));
     }
 
     public static class Environment {
