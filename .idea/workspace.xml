@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8bf5463-f926-4107-bfd7-32b4496f7044" name="Default" comment="Fixes typo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefirebooter4700616912887627256.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefirebooter8764412748060654526.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.txt" afterPath="$PROJECT_DIR$/src/main/resources/config.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-dao.CrawledDomainImplTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-dao.CrawledDomainImplTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-processor.CrawlResultProcessorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-processor.CrawlResultProcessorTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-processor.DiscoveredDomainProcessorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-processor.DiscoveredDomainProcessorTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/dao.CrawledDomainImplTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/dao.CrawledDomainImplTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/processor.CrawlResultProcessorTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/processor.CrawlResultProcessorTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/processor.DiscoveredDomainProcessorTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/processor.DiscoveredDomainProcessorTest.txt" />
     </list>
     <ignored path="TomatoHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,8 +134,8 @@
           <file leaf-file-name="UtilTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/Util/UtilTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+                <state relative-caret-position="510">
+                  <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -190,11 +199,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+                <state relative-caret-position="544">
+                  <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -280,11 +289,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="config.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/resources/config.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+                <state relative-caret-position="340">
+                  <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -318,10 +327,10 @@
         <option value="$PROJECT_DIR$/src/main/java/application/queuemanager/CrawlResultManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/queuemanager/FreshDomainManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/queuemanager/DiscoveredDomainManager.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.txt" />
         <option value="$PROJECT_DIR$/src/test/java/Util/UtilTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/dao/DomainQueueImplTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.txt" />
       </list>
     </option>
   </component>
@@ -1586,14 +1595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1664,16 +1665,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Util/UtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="510">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        <state relative-caret-position="544">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
           <folding />
         </state>
       </provider>
