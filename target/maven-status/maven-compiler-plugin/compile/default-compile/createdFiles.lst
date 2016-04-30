@@ -1,7 +1,0 @@
-Hub\DAO.class
-Hub\Hub.class
-messaging\Messenger.class
-messaging\MessagingFacade.class
-Hub\Main.class
-messaging\Consumer.class
-messaging\Publisher.class

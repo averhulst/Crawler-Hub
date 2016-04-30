@@ -1,0 +1,23 @@
+{
+  "QUEUE_MANAGER_TICK_RATE": 50,
+
+  "FRESH_DOMAIN_QUEUE_DESIRED_SIZE": 100,
+
+  "ENVIRONMENT": {
+    "CRAWL_RESULTS_DB": {
+      "Address": "71.226.124.148",
+      "Port": 27017
+    },
+    "DOMAIN_QUEUE_DB": {
+      "Address": "71.226.124.148",
+      "Port": 6379
+    },
+    "MESSAGING_SERVICE": {
+      "Address": "71.226.124.148",
+      "Port": 0,
+      "User_name": "crawlernode",
+      "Pass": "nodelol"
+    }
+  }
+
+}

@@ -25,6 +25,8 @@
         <module name="tomatoHub" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tomatoHub" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-

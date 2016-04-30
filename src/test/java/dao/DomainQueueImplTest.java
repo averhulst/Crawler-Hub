@@ -14,31 +14,31 @@ import java.util.List;
 public class DomainQueueImplTest {
     private DomainStoreImpl domainStoreImpl;
 
-    @Before
-    public void setUp() throws Exception {
-        domainStoreImpl = DomainStoreImpl.getInstance();
-        domainStoreImpl.flushDb();
-        assert(domainStoreImpl.getNextDomain() == null);
-    }
-
-    @Test
-    public void testEnqueueDomain() throws Exception {
-        String[] domains = new String[] {
-                "http://www.google.com",
-                "http://www.reddit.com",
-                "http://www.youtube.com"
-        };
-        List<String> insertedDomains = new ArrayList(Arrays.asList(domains));
-        List<String> retrievedDomains = new ArrayList<>();
-
-        for(String domain : insertedDomains){
-            domainStoreImpl.enqueueDomain(domain);
-        }
-
-        for(int i = 0 ; i < domains.length ; i++){
-            retrievedDomains.add(domainStoreImpl.getNextDomain());
-        }
-
-        assertEquals(retrievedDomains,insertedDomains);
-    }
+//    @Before
+//    public void setUp() throws Exception {
+//        domainStoreImpl = DomainStoreImpl.getInstance();
+//        domainStoreImpl.flushDb();
+//        assert(domainStoreImpl.getNextDomain() == null);
+//    }
+//
+//    @Test
+//    public void testEnqueueDomain() throws Exception {
+//        String[] domains = new String[] {
+//                "http://www.google.com",
+//                "http://www.reddit.com",
+//                "http://www.youtube.com"
+//        };
+//        List<String> insertedDomains = new ArrayList(Arrays.asList(domains));
+//        List<String> retrievedDomains = new ArrayList<>();
+//
+//        for(String domain : insertedDomains){
+//            domainStoreImpl.enqueueDomain(domain);
+//        }
+//
+//        for(int i = 0 ; i < domains.length ; i++){
+//            retrievedDomains.add(domainStoreImpl.getNextDomain());
+//        }
+//
+//        assertEquals(retrievedDomains,insertedDomains);
+//    }
 }
