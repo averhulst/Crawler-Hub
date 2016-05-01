@@ -34,7 +34,12 @@ public class FreshDomainManager extends QueueManager {
             if(domainStore.getSize() > 0 ){
                 queue.publishMessage(domainStore.getNextDomain());
             }else{
-                LOGGER.warning("Domain store empty!");
+                LOGGER.warning("Domain store empty, unable to supply crawlable domains to the job queue! \n");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
         }

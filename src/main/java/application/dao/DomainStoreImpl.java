@@ -1,19 +1,24 @@
 package application.dao;
 
 import application.hub.Config;
+import application.queuemanager.DiscoveredDomainManager;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+
+import java.util.logging.Logger;
 
 public class DomainStoreImpl implements DomainStoreDAO {
     private JedisPool jedisPool;
     private String jedisQueueName;
     private static DomainStoreImpl instance = new DomainStoreImpl();
+    private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainManager.class.getName());
 
     private DomainStoreImpl() {
         jedisQueueName = "domainQueue";
         connect();
     }
+
     public static DomainStoreImpl getInstance(){
         return instance;
     }
@@ -23,6 +28,8 @@ public class DomainStoreImpl implements DomainStoreDAO {
         String nextdomain = null;
         try{
             nextdomain = jedis.spop(jedisQueueName);
+            System.out.println(getSize());
+            LOGGER.warning("size: " + getSize());
             //spop will return a random item from the set, not going to care about order for now
         }finally{
             jedisPool.returnResource(jedis);

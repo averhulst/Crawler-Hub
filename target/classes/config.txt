@@ -6,11 +6,11 @@
   "ENVIRONMENT": {
     "CRAWL_RESULTS_DB": {
       "Address": "71.226.124.148",
-      "Port": 27217
+      "Port": 6379
     },
     "DOMAIN_QUEUE_DB": {
       "Address": "71.226.124.148",
-      "Port": 27217
+      "Port": 6379
     },
     "MESSAGING_SERVICE": {
       "Address": "71.226.124.148",

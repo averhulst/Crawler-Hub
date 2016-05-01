@@ -12,7 +12,6 @@ import java.util.logging.Logger;
 public class DiscoveredDomainManager extends QueueManager {
     private DomainStoreDAO domainStore;
     private final static Logger LOGGER = Logger.getLogger(DiscoveredDomainManager.class.getName());
-    private int desiredQueueSize = Config.FRESH_DOMAIN_QUEUE_DESIRED_SIZE;
 
     public DiscoveredDomainManager(Queue queue, DomainStoreDAO dao, ExecutorService threadPool) {
         this.queue = queue;
@@ -20,41 +19,27 @@ public class DiscoveredDomainManager extends QueueManager {
         this.domainStore = dao;
         LOGGER.info("DiscoveredDomainManager running!");
 
-        if(queue.getQueueSize() == 0){
-            queue.publishMessages(produceDomainSeeds());
-        }
     }
 
     public void tick(){
-        produceFreshDomains();
+        pollDiscoveredDomainQueue();
     }
 
-    private void produceFreshDomains(){
-        while(queue.getQueueSize() < desiredQueueSize){
-            if(domainStore.getSize() > 0 ){
-                queue.publishMessage(domainStore.getNextDomain());
-            }else{
-                LOGGER.warning("Domain store empty!");
+    private void pollDiscoveredDomainQueue() {
+        String message = queue.getMessage();
+
+        if (message.length() == 0) {
+            try {
+                LOGGER.warning("Discovered Domain job queue returned empty message. probably empty! \n");
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-
+            return;
         }
+
+        LOGGER.warning("Got a message! \n" + message.length());
+
     }
 
-    private List produceDomainSeeds(){
-        return new ArrayList<String>(){{
-            add("http://animagraffs.com/");
-            add("http://jgrapht.org/");
-            add("http://www.pixijs.com/");
-            add("http://www.draw2d.org/");
-            add("http://www.reddit.com/");
-            add("http://www.cnn.com/");
-            add("http://www.stackoverflow.com/");
-            add("http://www.theguardian.com/");
-            add("http://www.newsweek.com/");
-            add("http://www.usatoday.com/");
-            add("http://www.digg.com/");
-            add("http://www.anandtech.com/");
-            add("http://www.tomshardware.com/");
-        }};
-    }
 }
