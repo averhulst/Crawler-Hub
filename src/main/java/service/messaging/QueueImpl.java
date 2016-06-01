@@ -21,6 +21,8 @@ public class QueueImpl implements Queue{
             AMQP.Queue.DeclareOk queue = channel.queueDeclare(queueName, false, false, false, null);
             queueSize = queue.getMessageCount();
         } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(272);
             //TODO log me
         }
         return queueSize;

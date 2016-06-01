@@ -3,6 +3,8 @@ package application.dao;
 import application.hub.Config;
 import com.mongodb.*;
 import com.mongodb.util.JSON;
+import Util.Util;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.net.UnknownHostException;
@@ -10,9 +12,11 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class CrawlResultsImpl implements CrawledResultsDAO {
-    Mongo mongo;
-    DB db;
-    DBCollection collection;
+    private Mongo mongo;
+    private DB db;
+    private DBCollection crawledDomainsCollection;
+
+
     private static CrawledResultsDAO instance = new CrawlResultsImpl();
 
     public static CrawledResultsDAO getInstance(){
@@ -27,9 +31,11 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
                     Config.ENVIRONMENT.CRAWL_RESULTS_DB_PORT
             );
             db = mongo.getDB("tomato");
-            collection =  db.getCollection("crawledDomains");
+            crawledDomainsCollection =  db.getCollection("crawledDomains");
+
         } catch (UnknownHostException e) {
             e.printStackTrace();
+            System.exit(555);
         }
     }
 
@@ -38,12 +44,13 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
 
         if(databaseDocument.size() > 0){
             try{
-                collection.save(databaseDocument);
+                crawledDomainsCollection.save(databaseDocument);
             }catch(com.mongodb.MongoInternalException e){
                 System.err.println("BSON size exceeded");
+            }catch (Exception f) {
+                f.printStackTrace();
             }
         }
-
     }
 
     public synchronized List get(Map where){
@@ -51,7 +58,7 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
         BasicDBObject query = new BasicDBObject();
         query.putAll(where);
 
-        DBCursor cursor = collection.find(query);
+        DBCursor cursor = crawledDomainsCollection.find(query);
 
         while (cursor.hasNext()) {
             result.add(cursor.next().toString());
@@ -61,7 +68,7 @@ public class CrawlResultsImpl implements CrawledResultsDAO {
 
     public synchronized boolean domainHasBeenCrawled(String domainHash){
         BasicDBObject query = new BasicDBObject("_id", domainHash);
-        DBCursor cursor = collection.find(query);
+        DBCursor cursor = crawledDomainsCollection.find(query);
         return cursor.hasNext();
     }
 }

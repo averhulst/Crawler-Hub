@@ -27,7 +27,6 @@ public class CrawlResultManager extends QueueManager {
         if(message != null && message.length() > 0){
             try {
                 String decompressedString = Util.decompressString(message);
-                System.out.println(decompressedString);
                 processCrawlResult(decompressedString);
             } catch (IOException e) {
                 LOGGER.info(e.getStackTrace().toString());
@@ -61,7 +60,7 @@ public class CrawlResultManager extends QueueManager {
             return false;
         }
 
-        return URL.length() > 0 && pages.length() > 0;
+        return URL.length() > 0;
     }
 
 

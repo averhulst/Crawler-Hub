@@ -2,22 +2,38 @@ package application.queuemanager;
 
 import application.dao.DomainStoreDAO;
 import application.hub.Config;
+import com.mongodb.*;
+import com.rabbitmq.client.AMQP;
 import service.messaging.Queue;
 
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.logging.Logger;
 
 public class FreshDomainManager extends QueueManager {
-    private DomainStoreDAO domainStore;
+    private DBCollection persistentDomainQueueStore;
+    private DB db;
     private final static Logger LOGGER = Logger.getLogger(FreshDomainManager.class.getName());
     private int desiredQueueSize = Config.FRESH_DOMAIN_QUEUE_DESIRED_SIZE;
+    private Mongo mongo;
 
     public FreshDomainManager(Queue queue, DomainStoreDAO dao, ExecutorService threadPool) {
         this.queue = queue;
         this.threadPool = threadPool;
-        this.domainStore = dao;
+
+        try {
+            mongo = new MongoClient(
+                    Config.ENVIRONMENT.CRAWL_RESULTS_DB_ADDRESS,
+                    Config.ENVIRONMENT.CRAWL_RESULTS_DB_PORT
+            );
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        this.db = mongo.getDB("tomato");
+
+        this.persistentDomainQueueStore=  db.getCollection("domainQueue");
         LOGGER.info("FreshDomainManager running!");
 
         if(queue.getQueueSize() == 0){
@@ -31,8 +47,12 @@ public class FreshDomainManager extends QueueManager {
 
     private void produceFreshDomains(){
         while(queue.getQueueSize() < desiredQueueSize){
-            if(domainStore.getSize() > 0 ){
-                queue.publishMessage(domainStore.getNextDomain());
+            DBObject query = new BasicDBObject();
+            DBObject domain = persistentDomainQueueStore.findAndRemove(query);
+            String newDomain = domain.get("url").toString();
+
+            if(newDomain.length() > 0){
+                queue.publishMessage(newDomain);
             }else{
                 LOGGER.warning("Domain store empty, unable to supply crawlable domains to the job queue! \n");
                 try {
